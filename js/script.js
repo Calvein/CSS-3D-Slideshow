@@ -1,5 +1,12 @@
 $(function() {
 	$.support.transform = Modernizr.csstransforms3d ? '3d' : Modernizr.csstransforms ? '2d' : false;
+	
+	// Hack pour lisser les bords des images en CSS 3D
+	if ($.support.transform === '3d') {
+		var el = document.getElementsByTagName('a')[0];
+		el.focus();
+		el.blur();
+	}
 
 	if ($.support.transform) {
 		$.cssHooks.transform = {
