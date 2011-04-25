@@ -80,7 +80,7 @@ $(function() {
 	// Loop toutes les 3 secondes
 	function slideLoop() {
 		slideLoopTimeout = setTimeout( function() {
-			//$slides.trigger('slide');
+			$slides.trigger('slide');
 			slideLoop();
 		}, 3000);
 	}	
