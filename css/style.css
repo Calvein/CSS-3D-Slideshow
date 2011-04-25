@@ -167,23 +167,119 @@ h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 /**
  * Primary styles
  *
- * Author: @calvein
+ * Author: @Calvein
+ */
+
+
+/**
+ * 	Design by Steaw (http://www.steaw-webdesign.com/)
  */
 
 body {
+	width: 1000px;
+	margin: 0 auto;
 	background: #00101D url(http://www.steaw-webdesign.com/wp-content/themes/steaw-wd/hab/wall.jpg) no-repeat top center;
 }
- 
+
+header {
+	height: 160px;
+	position: relative;
+}
+
+.logo {
+	background: url(../img/logo.png) no-repeat top left;
+	display: block;
+	height: 140px;
+	left: 10px;
+	overflow: hidden;
+	position: absolute;
+	text-indent: -290486px;
+	top: 8px;
+	width: 120px;
+}
+
+.logo a {
+	display: block;
+	height: 140px;
+	width: 120px;
+}
+
+.description {
+	color: #899EAB;
+	font-size: 14px;
+	font-style: italic;
+	left: 150px;
+	line-height: 20px;
+	position: absolute;
+	top: 120px;
+	
+	font-family: 'Georgia', serif;
+	font-weight: normal;
+}
+
+.nav {
+	border-bottom: 1px solid #042F49;
+	bottom: 25px;
+	font-family: Arial,Verdana,sans-serif;
+	font-weight: bold;
+	position: absolute;
+	right: 0;
+	text-transform: uppercase;
+	width: 658px;
+	margin-right: 20px;
+}
+
+.nav li {
+	display: inline;
+}
+
+.nav a {
+	border-bottom: 1px solid #042F49;
+	color: #899EAB;
+	float: right;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 50px;
+	padding-bottom: 10px;
+	position: relative;
+	right: 0;
+	top: 1px;
+	
+	font-size: 14px;
+	text-decoration: none;	
+}
+
+.nav a.on {
+	border-bottom-width: 5px;
+	color: white;
+	padding-bottom: 6px;
+	text-decoration: none;
+}
+
+.nav a:hover, .nav a:focus {
+	border-bottom-width: 5px;
+	color: white;
+	padding-bottom: 6px;
+	text-decoration: none;
+	
+	outline: none;
+}
+
+
+/**
+ * Slideshow
+ */
+
 section {
 	position: relative;
 	width: 960px;
-	height: 340px;
-	margin: 200px auto;
+	height: 380px;
+	padding: 20px;
 }
- 
+
 #slides {
-	width: 100%;
-	height: 100%;
+	width: 960px;
+	height: 380px;
 	position: relative;
 	-webkit-perspective: 800;
 	-moz-perspective: 800;
@@ -196,7 +292,7 @@ section {
 	-o-perspective-origin: center right;
 	perspective-origin: center right;
 }
- 
+
 .slide {
 	display: block;
 	position: absolute;
@@ -208,77 +304,78 @@ section {
 	-o-transition: -o-transform .7s;
 	transition: transform .7s;
 	font-family: Georgia, Constantina, 'Nimbus Roman No9 L', serif;
-	font-size: 24px;
-	text-decoration: none !important;	
-	color: #fff;
-	text-shadow: 0 1px 4px #000;
-	
-	-webkit-touch-callout: none;
 }
- 
-/* Images */
-#slides figure:nth-child(1) a { background: hsla(   0, 100%, 50%, 0.8 ); }
-#slides figure:nth-child(2) a { background: hsla(  40, 100%, 50%, 0.8 ); }
-#slides figure:nth-child(3) a { background: hsla(  80, 100%, 50%, 0.8 ); }
-#slides figure:nth-child(4) a { background: hsla( 120, 100%, 50%, 0.8 ); }
-#slides figure:nth-child(5) a { background: hsla( 160, 100%, 50%, 0.8 ); }
-#slides figure:nth-child(6) a { background: hsla( 200, 100%, 50%, 0.8 ); }
-#slides figure:nth-child(7) a { background: hsla( 240, 100%, 50%, 0.8 ); }
-#slides figure:nth-child(8) a { background: hsla( 280, 100%, 50%, 0.8 ); }
-#slides figure:nth-child(9) a { background: hsla( 320, 100%, 50%, 0.8 ); }
 
 .slide a {
 	display: block;
-	width: 460px;
-	height: 260px;
+	width: 100%;
+	height: auto;
+	font-size: 24px;
+	text-decoration: none !important;	
+	color: #fff;
+	text-shadow: 0 1px 3px #000;
 }
 
 .boxshadow .slide a:focus {
 	outline: none;
-	-webkit-box-shadow: inset 0 0 30px rgba(0, 0, 0, .8), 0 0 30px rgba(0, 0, 0, .8);
-	-moz-box-shadow: inset 0 0 30px rgba(0, 0, 0, .8), 0 0 30px rgba(0, 0, 0, .8);
-	box-shadow: inset 0 0 30px rgba(0, 0, 0, .8), 0 0 30px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: inset 0 0 30px rgba(0, 18, 26, .8), 0 0 30px rgba(0, 18, 26, .8);
+	-moz-box-shadow: inset 0 0 30px rgba(0, 18, 26, .8), 0 0 30px rgba(0, 18, 26, .8);
+	box-shadow: inset 0 0 50px rgba(0, 18, 26, .8), 0 0 30px rgba(0, 18, 26, .8);
 }
 
 .no-boxshadow .slide a:focus {
 	outline: 3px solid #666;
 }
 
-/* -webkit-box-reflect bug avec -webkit-transform: scale(x) donc seulement sur le .active si la 3D est pas active
-   http://jsfiddle.net/Calou/LkQGh/ */
-/* img */
+.slide img {
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: -1;
+}
+
+/**
+ * -webkit-box-reflect bug avec -webkit-transform: scale(x) donc seulement sur le .active si la 3D est pas active
+ * http://jsfiddle.net/Calou/LkQGh/
+ */ 
 .csstransforms3d .slide img {
 	-webkit-box-reflect: below 0 -webkit-linear-gradient(rgba(255, 255, 255, .01) 66%, rgba(255, 255, 255, .3));
 }
 
-a:focus {color :red;}
-
 .slide figcaption {
 	display: none;
+	-webkit-transition: all .3s;
 }
  
 .slide.active figcaption {
 	display: block;
 	position: absolute;
-	width: 460px;
+	width: 100%;
 	bottom: 85px;
 	left: 15px;
+}
+
+.slide a:hover figcaption, .slide a:focus figcaption {
+	color: #CCF0FF;
+	text-shadow: 0 1px 3px #000, 0 1px 6px rgba(101, 189, 228, .4);
 }
  
 button {
 	display: block;
 	position: absolute;
-	bottom: 40px;
-	right: 20px;
+	bottom: 94px;
+	right: 45px;
+	padding: 0;
+	margin: 0;
 	border: none;
 	background: none;
 	font-size: 36px;
 	color: #507084;
-	text-shadow: 0 1px 4px #000;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, .4);
 	z-index: 9002;
+	
+	-webkit-touch-callout: none;
 }
-
-
 
 /**
  * Non-semantic helper classes: please define your styles before this section.
@@ -307,30 +404,3 @@ button {
 .clearfix:after { clear: both; }
 /* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
 .clearfix { zoom: 1; }
-
-
-
-/**
- * Media queries for responsive design.
- *
- * These follow after primary styles so they will successfully override.
- */
-
-@media all and (orientation:portrait) {
-  /* Style adjustments for portrait mode goes here */
-
-}
-
-@media all and (orientation:landscape) {
-  /* Style adjustments for landscape mode goes here */
-
-}
-
-/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
-   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
-
-
-  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
-  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
-}
