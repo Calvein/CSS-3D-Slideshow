@@ -197,6 +197,10 @@ header {
 	overflow: hidden;
 }
 
+.logo:active {
+	top: 9px;	
+}
+
 .logo img {
 	display: none;
 }
