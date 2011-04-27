@@ -257,11 +257,11 @@ hr {
 	position: absolute;
 	width: 460px;
 	height: 380px;
-	-webkit-transition: -webkit-transform .7s;
-	-moz-transition: -moz-transform .7s;
-	-ms-transition: -ms-transform .7s;
-	-o-transition: -o-transform .7s;
-	transition: transform .7s;
+	-webkit-transition: -webkit-transform ease-in .7s;
+	-moz-transition: -moz-transform ease-in .7s;
+	-ms-transition: -ms-transform ease-in .7s;
+	-o-transition: -o-transform ease-in .7s;
+	transition: transform ease-in .7s;
 }
 
 .slide a {
