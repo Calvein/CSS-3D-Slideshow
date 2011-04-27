@@ -109,7 +109,7 @@ $(function() {
 	// Loop every 3 seconds
 	function slideLoop() {
 		slideLoopTimeout = setTimeout( function() {
-			//$slides.trigger('slide');
+			$slides.trigger('slide');
 			slideLoop();
 		}, 3000);
 	}	
