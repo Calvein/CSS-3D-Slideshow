@@ -39,8 +39,7 @@ $(function() {
 			(div.style.MozTransform === '' ? 'MozTransform' :
 			(div.style.MsTransform === '' ? 'MsTransform' :
 			(div.style.OTransform === '' ? 'OTransform' :
-			(div.style.Transform === '' ? 'transform' :
-			false)))));
+			false))));
 			
 			elem.style[property] = value;
 		}
